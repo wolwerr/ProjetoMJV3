@@ -1,0 +1,15 @@
+<div class="card" *ngIf="coment && card">
+    <h1>{{ coment.name }}</h1>
+    <p>Comentário: {{ coment?.coment }}</p>
+    <p>Data comentário: {{ coment.inclusionDate | date }}</p>
+    <div class="actions">
+        <a [routerLink]="['/coment-details', coment.id]">Detalhes</a>
+    </div>
+</div>
+
+<div class="details" *ngIf="coment && !card">
+    <h1>Nome: <b>{{ coment.name }}</b></h1>
+    <p>Comentário: {{ coment.coment }}</p>
+    <p>Data comentário: {{ coment.inclusionDate | date }}</p>
+</div>
+

@@ -1,0 +1,8 @@
+<app-header></app-header>
+    <div class="search">
+        <h1>Busca de Comentário</h1>
+        <input type="text" placeholder="Digite o nome" (input)="findComentByFilter($event, 'Name')">
+        <input type="number" placeholder="Digite o id do comentário" (input)="findComentByFilter($event, 'Id')">
+    </div>
+    <app-coment-list [coments]="filteredComents"></app-coment-list>
+<app-footer></app-footer>

@@ -5,6 +5,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CpfPipe } from './pipes/cpf.pipe';
 import { RedDirective } from './directives/red.directive';
 import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 const components = [
   HeaderComponent,
@@ -23,7 +25,8 @@ const directives = [RedDirective];
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FontAwesomeModule
   ],
   exports: [
     ...components,
@@ -31,4 +34,5 @@ const directives = [RedDirective];
     ...directives
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+ }

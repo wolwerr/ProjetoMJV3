@@ -7,7 +7,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ComentDetailsPageComponent } from './pages/coment-details-page/coment-details-page.component';
 import { RouterModule } from '@angular/router';
 import { CreateComentPageComponent } from './pages/create-coment-page/create-coment-page.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,6 +23,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     RouterModule,
     ReactiveFormsModule
-  ]
+  ],
+  exports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
 })
 export class ComentsModule { }

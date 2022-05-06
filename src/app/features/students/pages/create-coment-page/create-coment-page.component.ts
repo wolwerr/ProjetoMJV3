@@ -33,7 +33,7 @@ export class CreateComentPageComponent implements OnInit {
     this.coment.name = formValue.name;
     this.coment.email = formValue.email;
     this.coment.password = formValue.password;
-    this.coment.coment = formValue.monthlyPayment;;
+    this.coment.coment = formValue.coment;
     this.comentsService.createComent(this.coment);
     alert('Comentário adicionado com sucesso!');
     this.router.navigateByUrl('/coments');
